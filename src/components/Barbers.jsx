@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
+import Section from "./Section";
 
 const accent = "#e7dfd8";
 
 export default function Barbers() {
   return (
-    <section id="barbers" className="bg-black text-white py-20">
+    <Section id="barbers" className="bg-black text-white py-20">
       <div className="max-w-6xl mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
@@ -63,6 +64,6 @@ export default function Barbers() {
           </motion.div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

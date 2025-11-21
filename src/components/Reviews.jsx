@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import Section from "./Section";
 
 const reviews = [
   { name: "Milan", text: "Altijd strak. Geen gezeik, gewoon top werk.", stars: 5 },
@@ -10,7 +11,7 @@ const reviews = [
 
 export default function Reviews() {
   return (
-    <section id="reviews" className="bg-black text-white py-20 overflow-hidden">
+    <Section id="reviews" className="bg-black text-white py-20 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 mb-10">
         <h2 className="text-4xl md:text-5xl font-serif font-black">Reviews</h2>
       </div>
@@ -40,6 +41,6 @@ export default function Reviews() {
           100% { transform: translateX(-50%); }
         }
       `}</style>
-    </section>
+    </Section>
   );
 }

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Calendar, Send } from "lucide-react";
+import Section from "./Section";
 
 const accent = "#e7dfd8";
 
@@ -10,7 +11,7 @@ export default function Booking() {
   const [pref, setPref] = useState("Geen voorkeur");
 
   return (
-    <section id="booking" className="bg-white text-black py-20">
+    <Section id="booking" className="bg-white text-black py-20">
       <div className="max-w-6xl mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
@@ -76,6 +77,6 @@ export default function Booking() {
       >
         Boek nu
       </motion.a>
-    </section>
+    </Section>
   );
 }

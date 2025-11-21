@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Section from "./Section";
 
 const images = [
   "https://images.unsplash.com/photo-1556229010-aa3a09b07d7c?q=80&w=1200&auto=format&fit=crop",
@@ -11,7 +12,7 @@ const images = [
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="bg-white text-black py-20">
+    <Section id="portfolio" className="bg-white text-black py-20">
       <div className="max-w-6xl mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
@@ -44,6 +45,6 @@ export default function Portfolio() {
         </div>
         <p className="mt-6 text-neutral-600">Later komen hier echte foto's. Voor nu placeholders.</p>
       </div>
-    </section>
+    </Section>
   );
 }

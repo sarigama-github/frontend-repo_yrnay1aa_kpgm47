@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Scissors, ShieldCheck, Sparkles, User, BadgeCheck } from "lucide-react";
+import Section from "./Section";
 
 const services = [
   { title: "Knippen", icon: Scissors, price: "€28" },
@@ -13,7 +14,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="bg-white text-black py-20">
+    <Section id="services" className="bg-white text-black py-20">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -48,6 +49,6 @@ export default function Services() {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

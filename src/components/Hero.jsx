@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Section from "./Section";
 
 const accent = "#e7dfd8"; // light beige accent
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative min-h-[90vh] w-full overflow-hidden bg-black text-white">
+    <Section id="hero" className="relative min-h-[90vh] w-full overflow-hidden bg-black text-white">
       {/* Background image overlay */}
       <div className="absolute inset-0">
         <img
@@ -68,6 +69,6 @@ export default function Hero() {
           transition={{ delay: 0.6, duration: 0.8 }}
         />
       </div>
-    </section>
+    </Section>
   );
 }

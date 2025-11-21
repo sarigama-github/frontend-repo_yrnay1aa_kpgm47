@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { MapPin, Clock, MessageCircle } from "lucide-react";
+import Section from "./Section";
 
 const accent = "#e7dfd8";
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-black text-white py-20">
+    <Section id="contact" className="bg-black text-white py-20">
       <div className="max-w-6xl mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
@@ -69,6 +70,6 @@ export default function Contact() {
           </motion.div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
