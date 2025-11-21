@@ -1,73 +1,44 @@
+import Hero from "./components/Hero";
+import Services from "./components/Services";
+import Barbers from "./components/Barbers";
+import Portfolio from "./components/Portfolio";
+import Reviews from "./components/Reviews";
+import Booking from "./components/Booking";
+import Contact from "./components/Contact";
+
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_50%)]"></div>
-
-      <div className="relative min-h-screen flex items-center justify-center p-8">
-        <div className="max-w-2xl w-full">
-          {/* Header with Flames icon */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center mb-6">
-              <img
-                src="/flame-icon.svg"
-                alt="Flames"
-                className="w-24 h-24 drop-shadow-[0_0_25px_rgba(59,130,246,0.5)]"
-              />
-            </div>
-
-            <h1 className="text-5xl font-bold text-white mb-4 tracking-tight">
-              Flames Blue
-            </h1>
-
-            <p className="text-xl text-blue-200 mb-6">
-              Build applications through conversation
-            </p>
-          </div>
-
-          {/* Instructions */}
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8 shadow-xl mb-6">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                1
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Describe your idea</h3>
-                <p className="text-blue-200/80 text-sm">Use the chat panel on the left to tell the AI what you want to build</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                2
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Watch it build</h3>
-                <p className="text-blue-200/80 text-sm">Your app will appear in this preview as the AI generates the code</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                3
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Refine and iterate</h3>
-                <p className="text-blue-200/80 text-sm">Continue the conversation to add features and make changes</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Footer */}
-          <div className="text-center">
-            <p className="text-sm text-blue-300/60">
-              No coding required • Just describe what you want
-            </p>
-          </div>
+    <div className="min-h-screen bg-white text-black">
+      {/* Minimal top bar */}
+      <header className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 md:px-10 py-4 backdrop-blur border-b border-white/10 bg-black/40 text-white">
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 rounded-full bg-white" />
+          <span className="font-extrabold tracking-wide">Stewie's Barbershop</span>
         </div>
-      </div>
+        <nav className="hidden md:flex items-center gap-6 text-sm">
+          <a href="#services" className="hover:opacity-80">Diensten</a>
+          <a href="#barbers" className="hover:opacity-80">Over</a>
+          <a href="#portfolio" className="hover:opacity-80">Portfolio</a>
+          <a href="#reviews" className="hover:opacity-80">Reviews</a>
+          <a href="#booking" className="px-4 py-2 rounded-full bg-white text-black font-bold hover:opacity-90">Boek nu</a>
+        </nav>
+      </header>
+
+      <main className="pt-16">
+        <Hero />
+        <Services />
+        <Barbers />
+        <Portfolio />
+        <Reviews />
+        <Booking />
+        <Contact />
+      </main>
+
+      <footer className="bg-black text-white py-10 text-center text-sm">
+        © {new Date().getFullYear()} Stewie's Barbershop • All rights reserved
+      </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
