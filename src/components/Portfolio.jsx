@@ -13,7 +13,15 @@ export default function Portfolio() {
   return (
     <section id="portfolio" className="bg-white text-black py-20">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-serif font-black mb-10">Portfolio</h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.5 }}
+          className="text-4xl md:text-5xl font-serif font-black mb-10"
+        >
+          Portfolio
+        </motion.h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {images.map((src, i) => (
             <motion.div
@@ -21,10 +29,16 @@ export default function Portfolio() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
+              transition={{ delay: i * 0.06 }}
               className="aspect-square overflow-hidden rounded-xl border border-black/10"
             >
-              <img src={src} alt="Barber work" className="w-full h-full object-cover hover:scale-105 transition duration-700" />
+              <motion.img
+                src={src}
+                alt="Barber work"
+                className="w-full h-full object-cover"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.5 }}
+              />
             </motion.div>
           ))}
         </div>

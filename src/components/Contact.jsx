@@ -1,4 +1,5 @@
-import { Phone, MapPin, Clock, MessageCircle } from "lucide-react";
+import { motion } from "framer-motion";
+import { MapPin, Clock, MessageCircle } from "lucide-react";
 
 const accent = "#e7dfd8";
 
@@ -6,9 +7,23 @@ export default function Contact() {
   return (
     <section id="contact" className="bg-black text-white py-20">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-serif font-black mb-10">Contact & locatie</h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.5 }}
+          className="text-4xl md:text-5xl font-serif font-black mb-10"
+        >
+          Contact & locatie
+        </motion.h2>
         <div className="grid md:grid-cols-2 gap-8 items-start">
-          <div className="space-y-6">
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.45 }}
+            className="space-y-6"
+          >
             <div className="flex items-start gap-3">
               <MapPin className="mt-1" />
               <p>Boerhaaveplein 3, Bovenkarspel</p>
@@ -36,16 +51,22 @@ export default function Contact() {
             >
               <MessageCircle size={18} /> WhatsApp
             </a>
-          </div>
+          </motion.div>
 
-          <div className="rounded-2xl overflow-hidden border border-white/10">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.98 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5 }}
+            className="rounded-2xl overflow-hidden border border-white/10"
+          >
             <iframe
               title="map"
               src="https://www.openstreetmap.org/export/embed.html?bbox=5.269%2C52.694%2C5.300%2C52.707&layer=mapnik&marker=52.700%2C5.285"
               className="w-full h-[360px]"
               loading="lazy"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
