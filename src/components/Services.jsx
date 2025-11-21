@@ -1,13 +1,13 @@
-import { Scissors, Child, ShieldCheck, Sparkles, User, BadgeCheck, Beard } from "lucide-react";
+import { Scissors, ShieldCheck, Sparkles, User, BadgeCheck } from "lucide-react";
 
 const services = [
   { title: "Knippen", icon: Scissors, price: "€28" },
-  { title: "Knippen t/m 11 jaar", icon: Child, price: "€22" },
+  { title: "Knippen t/m 11 jaar", icon: User, price: "€22" },
   { title: "Alles met tondeuse (1 lengte)", icon: ShieldCheck, price: "€20" },
   { title: "Knippen + baardscheren", icon: Sparkles, price: "€40" },
   { title: "65+ knippen", icon: BadgeCheck, price: "€24" },
-  { title: "Knippen + baard trimmen", icon: User, price: "€38" },
-  { title: "Baard in model", icon: Beard, price: "€18" },
+  { title: "Knippen + baard trimmen", icon: Sparkles, price: "€38" },
+  { title: "Baard in model", icon: ShieldCheck, price: "€18" },
 ];
 
 export default function Services() {
@@ -20,7 +20,7 @@ export default function Services() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((s, i) => (
+          {services.map((s) => (
             <div key={s.title} className="group border border-black/10 rounded-2xl p-6 bg-neutral-50 hover:bg-neutral-100 transition">
               <div className="flex items-center gap-3 mb-4">
                 <s.icon className="w-6 h-6" />
